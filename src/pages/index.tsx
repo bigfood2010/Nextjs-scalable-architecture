@@ -7,7 +7,7 @@ import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
   return (
-    <section className={styles.main}>
+    <section className='bg-base'>
       <h1 className={styles.title}>
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>

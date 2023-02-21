@@ -10,7 +10,7 @@ const PrimaryLayout: React.FC<PropsWithChildren<IPrimaryLayout>> = ({
   return (
     <>
       <Head>
-        <title>Primary Layout Example</title>
+        <title>Primary Layout Example meow</title>
       </Head>
       <main className={styles.main}>{children}</main>
     </>
