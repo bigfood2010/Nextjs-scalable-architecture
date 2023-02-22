@@ -1,6 +1,6 @@
 import { IFooter } from './Footer';
 
-const base: IFooter = { sampleTextProp: 'sample Text Prop' };
+const base: IFooter = {};
 
 // const alt: IFooter = { sampleTextProp: 'Sample Text Prop Alt version' };
 

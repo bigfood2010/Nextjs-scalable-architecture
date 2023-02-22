@@ -3,19 +3,26 @@ import { PropsWithChildren } from 'react';
 import Footer from '../../navigation/footer/Footer';
 import Header from '../../navigation/header/Header';
 
-export interface IPrimaryLayout {}
+export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
+  justify?: 'items-center' | 'items-start';
+}
 
 const PrimaryLayout: React.FC<PropsWithChildren<IPrimaryLayout>> = ({
   children,
+  justify = 'items-center',
+  ...divProps
 }) => {
   return (
     <>
       <Head>
         <title>NextJs Fullstack App Template</title>
       </Head>
-      <div className="min-h-screen flex flex-col items-center">
+      <div
+        {...divProps}
+        className={`min-h-screen flex flex-col items-center ${justify}`}
+      >
         <Header />
-        <main>{children}</main>
+        <main className="px-5">{children}</main>
         <div className="m-auto" />
         <Footer />
       </div>
@@ -24,4 +31,3 @@ const PrimaryLayout: React.FC<PropsWithChildren<IPrimaryLayout>> = ({
 };
 
 export default PrimaryLayout;
-  
